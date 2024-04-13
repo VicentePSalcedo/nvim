@@ -5,3 +5,4 @@ git clone https://github.com/VicentePSalcedo/nvim.git ~/.config/nvim
 ```
 # TODO
 - add a comment plugin to comment code while in visual mode
+- fix auto bracket
