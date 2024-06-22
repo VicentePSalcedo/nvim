@@ -6,21 +6,12 @@ return {
         -- this is used to enable typsciprt auto completes and highlights
         lazy = false,
         config = function()
-            local capabilities = require("cmp_nvim_lsp").default_capabilities()
-
-            -- Setup language servers.
             local lspconfig = require("lspconfig")
-            lspconfig.tsserver.setup({ capabilities = capabilities })
-            lspconfig.eslint.setup({
-                on_attach = function(client, bufnr)
-                    vim.api.nvim_create_autocmd("BufWritePre", {
-                        buffer = bufnr,
-                        command = "EslintFixAll",
-                    })
-                end,
-                capabilities = capabilities
-            })
-            require("lspconfig").eslint.setup({})
+            lspconfig.tsserver.setup({})
+            lspconfig.eslint.setup({})
+            lspconfig.lua_ls.setup({})
+            lspconfig.angularls.setup({})
+            lspconfig.rust_analyzer.setup{}
         end,
         -- IMPORTANT --
     },
