@@ -11,7 +11,9 @@ return {
             lspconfig.eslint.setup({})
             lspconfig.lua_ls.setup({})
             lspconfig.angularls.setup({})
-            lspconfig.rust_analyzer.setup{}
+            lspconfig.rust_analyzer.setup({})
+            lspconfig.java.setup({})
+            lspconfig.jdtls.setup({})
         end,
         -- IMPORTANT --
     },
